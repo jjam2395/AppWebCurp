@@ -1,41 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src='/static/js/say-cheese.js'></script>
+	<script src="/static/js/datos.js"></script>
 	<title>Mi index</title>
 </head>
 <body>
 <form>
 	<label>Nombres</label>
-	<input type="text"></input><br>
+	<input type="text" id="nombres"></input><br>
 	<label>Apellido paterno</label>
-	<input type="text"></input><br>
+	<input type="text" id="paterno"></input><br>
 	<label>Apellido materno</label>
-	<input type="text"></input><br>
+	<input type="text" id="materno"></input><br>
 	<label>Fecha de nacimiento</label>
-	<input type="date" name="Fnacer"></input><br>
+	<input type="date" id="fNacer"></input><br>
 	<label>Direccion</label>
-	<input type="text"></input><br>
+	<input type="text" id="direccion"></input><br>
 	<label>Entidad</label>
-	<input type="text"></input><br>
+	<input type="text" id="entidad"></input><br>
 	<label>Sexo</label>
 	<datalist id="lsexo">
-    <option value="H">
-    <option value="M">">
+    <option value="H" label="Hombre">
+    <option value="M" label="Mujer">
 	</datalist>
+	<input name="color" list="lsexo" id="sexo"></input>
+	<a id="GenCurp" href="#">Comprar</a>
 </form>
 </body>
 </html>
 
-<datalist id="listas">
-    <option value="azul">
-    <option value="rojo">
-    <option value="amarillo">
-    <option value="negro">
-    <option value="verde">
-</datalist>
- 
-<!-- Asociamos al input la datalist 'listas' -->
-    <input name="color" list="listas">
-    <input type="submit" value="Enviar">
-</form>
 
