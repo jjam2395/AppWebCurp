@@ -3,15 +3,16 @@
 <head>
 	<script src='/static/js/say-cheese.js'></script>
 	<script src="/static/js/datos.js"></script>
+	<script src="/static/js/jquery.min.js"></script>
 	<title>Mi index</title>
 </head>
 <body>
 <form>
-	<label>Nombres</label>
+	<label>Nombre</label>
 	<input type="text" id="nombres"></input><br>
-	<label>Apellido paterno</label>
+	<label>A. paterno</label>
 	<input type="text" id="paterno"></input><br>
-	<label>Apellido materno</label>
+	<label>A. materno</label>
 	<input type="text" id="materno"></input><br>
 	<label>Fecha de nacimiento</label>
 	<input type="date" id="fNacer"></input><br>
@@ -25,7 +26,7 @@
     <option value="M" label="Mujer">
 	</datalist>
 	<input name="color" list="lsexo" id="sexo"></input>
-	<a id="GenCurp" href="#">Comprar</a>
+	<a id="GenCurp" href="#">Generar PDF</a>
 </form>
 </body>
 </html>
