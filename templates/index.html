@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mi index</title>
+</head>
+<body>
+<form>
+	<label>Nombres</label>
+	<input type="text"></input><br>
+	<label>Apellido paterno</label>
+	<input type="text"></input><br>
+	<label>Apellido materno</label>
+	<input type="text"></input><br>
+	<label>Fecha de nacimiento</label>
+	<input type="date" name="Fnacer"></input><br>
+	<label>Direccion</label>
+	<input type="text"></input><br>
+	<label>Entidad</label>
+	<input type="text"></input><br>
+	<label>Sexo</label>
+	<datalist id="lsexo">
+    <option value="H">
+    <option value="M">">
+	</datalist>
+</form>
+</body>
+</html>
+
+<datalist id="listas">
+    <option value="azul">
+    <option value="rojo">
+    <option value="amarillo">
+    <option value="negro">
+    <option value="verde">
+</datalist>
+ 
+<!-- Asociamos al input la datalist 'listas' -->
+    <input name="color" list="listas">
+    <input type="submit" value="Enviar">
+</form>
+
