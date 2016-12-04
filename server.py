@@ -1,8 +1,9 @@
 from flask import Flask, render_template
 
-app=Flask(__name__)
+app=Flask(__name__, static_url_path='/static')
 
 @app.route('/')
 def index():
-	return ('hola')
+	return render_template('index.html')
 
+app.run(debug=True, port=3000)
