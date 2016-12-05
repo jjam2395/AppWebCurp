@@ -1,6 +1,7 @@
 from flask import Flask, render_template, jsonify, request
 import string
 import random
+
 app=Flask(__name__, static_url_path='/static')
 
 @app.route('/')

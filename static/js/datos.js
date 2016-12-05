@@ -13,9 +13,16 @@ $(document).ready(function() {
 			anio:fecha[0],
 			mes:mes,
 			dia:fecha[2],
-			direccion:$("#direccion").val(),
 			entidad:$("#entidad").val(),
 			sexo:$("#sexo").val(),
+			
+			direccion:$("#direccion").val(),
+			correo:$("#correo").val(),
+			telefono:$("#telefono").val(),
+			nControl:$("#cControl").val(),
+			escuela:$("#escuela").val(),
+			semestre:$("#semestre").val(),
+			carrera:$("#carrera").val()
 			};
 			console.log(datos);
 
