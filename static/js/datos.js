@@ -10,7 +10,7 @@ $(document).ready(function() {
 			nombre:$("#nombres").val(),
 			paterno:$("#paterno").val(),
 			materno:$("#materno").val(),
-			año:fecha[0],
+			anio:fecha[0],
 			mes:mes,
 			dia:fecha[2],
 			direccion:$("#direccion").val(),
@@ -18,9 +18,15 @@ $(document).ready(function() {
 			sexo:$("#sexo").val(),
 			};
 			console.log(datos);
-		// $.get('http://192.168.43.67:8080/setDatos',datos,function(datos,status)
-		// 	{
-		// 		alert(status);
-		// 	});	
+
+			$.ajax({  // envia al servidor 
+                    url:'http://localhost:3000/datos',
+                    data:datos,
+                    type:'post',
+                    success:function (respuesta) {
+                        console.log(respuesta);
+                    }
+                });
+
 	});
 });
