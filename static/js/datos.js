@@ -27,7 +27,7 @@ $(document).ready(function() {
 			console.log(datos);
 
 			$.ajax({  // envia al servidor 
-                    url:'http://localhost:3000/datos',
+                    url:'http://localhost:8000/datos',
                     data:datos,
                     type:'post',
                     success:function (respuesta) {
