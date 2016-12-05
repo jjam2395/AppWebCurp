@@ -198,8 +198,10 @@ def add_datos():
     #ENVIO DE CURP AL TEXTINPUT
 	#display.text=curp
 	print(curp)
-
 	return jsonify({'status': True}), 200
 
+@app.route('/camara')
+def camara():
+	return render_template('camara.html')
 
 app.run(debug=True, port=3000)
