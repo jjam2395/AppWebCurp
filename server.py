@@ -22,8 +22,7 @@ def add_datos():
 	vocales=['A','E','I','O','U']
 	consonantes=['B','C','D','F','G','H','J','K','L','M','N','Ñ','P','Q','R','S','T','V','W','X','Y','Z']
 	mesfinal=""
-	nombres=(request.form['nombre']).upper()
-	listanombres=nombres.split(" ")#separa los nombres en un array
+	listanombres=((request.form['nombre']).upper()).split(" ")#separa los nombres en un array
 	paterno=(request.form['paterno']).upper()
 	materno=(request.form['materno']).upper()
 	anio=(request.form['anio']).upper()
