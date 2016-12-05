@@ -20,7 +20,7 @@ $(function() {
 			    }
 			    console.log(img.src);
 			   	$.ajax({
-			   		url:'http://localhost:3000/imagen',
+			   		url:'http://localhost:3000/img',
 			   		data:data,
 			   		type:'post',
 			   		success:function (respuesta) {

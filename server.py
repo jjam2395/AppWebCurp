@@ -1,6 +1,7 @@
 from flask import Flask, render_template, jsonify, request
 import string
 import random
+import pdfkit
 
 app=Flask(__name__, static_url_path='/static')
 
@@ -20,7 +21,8 @@ def add_datos():
 	vocales=['A','E','I','O','U']
 	consonantes=['B','C','D','F','G','H','J','K','L','M','N','Ñ','P','Q','R','S','T','V','W','X','Y','Z']
 	mesfinal=""
-	listanombres=((request.form['nombre']).upper()).split(" ")#separa los nombres en un array
+	nombres=(request.form['nombre']).upper()
+	listanombres=nombres.split(" ")#separa los nombres en un array
 	paterno=(request.form['paterno']).upper()
 	materno=(request.form['materno']).upper()
 	anio=(request.form['anio']).upper()
@@ -204,4 +206,10 @@ def add_datos():
 def camara():
 	return render_template('camara.html')
 
-app.run(debug=True, port=3000)
+@app.route('/img', methods=["GET","POST"])
+def img():
+	global src
+	src = request.form['src']# sacamos la variable que mando el cliente
+	return jsonify({'status': True}), 200 #retornamosun json para confirmar
+
+app.run(debug=True, port=8000)
