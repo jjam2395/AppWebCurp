@@ -10,6 +10,10 @@ app=Flask(__name__, static_url_path='/static')
 def index():
 	return render_template('index.html')
 
+@app.route('/solicita')
+def solicita():
+	return render_template('index3.html')
+
 @app.route('/datos', methods=["GET","POST"])
 def add_datos():
 	

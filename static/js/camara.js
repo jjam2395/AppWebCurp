@@ -32,3 +32,7 @@ $(function() {
 		  	
 		  sayCheese.start();
 		});
+
+//$('#imp').html(`<a href='/pdf/${$("#nombre").val()}/${$("#paterno").val()}/${$("#materno").val()}/${$("#sexo").val()}/${$("#dia").val()}/${$("#mes").val()}/${$("#anio").val()}/${e}/${$('#direccion').val()}/${window.edad}/${window.curp}'> <i class='glyphicon glyphicon-print' id='lin'></i>Imprimir PDF</a>`);
+
+ 
