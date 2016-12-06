@@ -27,6 +27,7 @@ $(function() {
 			   			console.log(respuesta);
 			   		}
 			   	});
+			    $('#imp').html(`<a class="btn btn-primary" href="/pdf">Descargar PDF</a>`);
 			});
 		  	
 		  sayCheese.start();

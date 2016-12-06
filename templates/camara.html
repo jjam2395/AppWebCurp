@@ -4,17 +4,130 @@
 	<title>Toma tu foto</title>
 	<script src="/static/js/jquery.min.js"></script>
 	<script src="/static/js/say_cheese.js"></script>
-	<script src="/static/js/camara.js?1.0.2"></script>
+	<script src="/static/js/camara.js?1.0.3"></script>
+	<link href="/static/css/bootstrap-flex.min.css" rel="stylesheet">
+    <link href="/static/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/css/app.css?1.3.6" rel="stylesheet">
 </head>
 <body>
 
-	<div id="container-element">
+	 <header id="header-container">
+ 
+        <div class="row flex-items-xs-middle flex-items-xs-center flex-items-md-around ">
+          <div class="col-xs-8  col-sm-10 col-md-6 text-xs-left text-sm-center text-md-left columna">
+            <h1 class="hidden-xs-down">Becas SEP</h1>
+            <h3 class="hidden-sm-up">Becas SEP</h3>
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-6  text-xs-center  text-md-center columna">
+            <span class="hidden-sm-down text-uppercase font-weight-bold">
+                <a  class="nav-link" href="www.sep.gob.mx"><img  height=80em src="/static/images/sep.png"></a>
+              </span>
+          </div>
+          <div class="botton-toggle col-xs-2 hidden-sm-up text-md-left">
+             <button class="navbar-toggler   " data-toggle="collapse" data-target="#navMenu">&#9776;</button>
+          </div>
+        </div>
+
+</header>
+
+  
+   <!-- /header -->
+
+   <!-- Menu -->
+
+   <div id="menu-container">
+     <nav id="navMenu" class="navbar-toggleable-xs navbar navbar-dark collapse"  ">
+      <div class="container">
+          <div class="row">
+            <div class="col-xs-12 ">
+              <ul class="nav navbar-nav text-xs-center">
+                <li class="nav-item ">
+                  <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item ">
+                  <a href="/solicita" class="nav-link">Solicita tu beca</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#faq" class="nav-link">Preguntas Frecuentes</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#acercade" class="nav-link">Acerca de Becas</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+      </div>
+     </nav>
+  
+    </div>
+
+   <!-- /Menu -->
+
+   <div id="acercade">
+            <div class="jumbotron">
+              <div class="container">
+                  <h1 class="display-3">Ultimo paso</h1>
+                  <hr class="my-2">
+                  <p class="lead">Para concluir la solicitud de la beca requerimos una fotografia</p>
+                  <p>Una vez que la hayas tomado debes descargar tu comprobante.</p>
+              </div>
+            </div>
+          </div>    
+
+	<div class="container">
+		<div class="row flex-items-xs-center text-xs-center">
+			<div class="row col-xs-6 div-foto">
+				<div id="container-element" class="col-xs-12 ">
+				</div>
+				<a  class="btn btn-primary col-xs-12" href="" id="snapshot" > Tomar Foto</a>
+			</div>
+			<div  class="row col-xs-6 div-foto">
+				<div id="container-element-tomada" class="col-xs-12 ">
+				</div>
+				<div id="imp" class="col-xs-12"></div>
+			</div>
+		</div>
 	</div>
-	<a href="" id="snapshot">Tomar Foto</a>
-	<div id="imp">		
-	</div>
-	<div id="container-element-tomada">
-	</div>
-	<a href="/pdf">Descargar PDF</a>
+
+  <!-- footer -->
+  <footer id="footer-container">
+    <div class="container">
+      <div class="row text-xs-center text-md-left">
+        <div class="col-md-4">
+          <form id="suscribeForm" action="#" > <!-- method=¨POST"-->
+            <h4 class="text-uppercase">¿Quieres mantenerte informado?</h4>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" name="email" placeholder="tu@correo.com">
+              <small class="form-text text-muted">No compartiremos tu información con nadie más</small>
+            </div>
+            <button type="submit" class="btn btn-primary form-text"> Suscribirme</button>
+          </form>
+        </div>
+        <div class="col-md-3 offset-md-5 navf">
+          <h4> Navegación</h4>
+          <ul class="nav">
+             <li class="nav-item">
+                  <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item ">
+                  <a href="/solicita" class="nav-link">Solicita tu beca</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#faq" class="nav-link">Preguntas Frecuentes</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#quien" class="nav-link">Acerca de Becas</a>
+                </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="/static/js/tether.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
 </body>
 </html>

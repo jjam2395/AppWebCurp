@@ -242,6 +242,7 @@ def pdf_template():
 	añoactual=2016
 	a=int(anio)
 	edad=añoactual-a
+	
 	data={
 		"edad":edad,
 		"curp":curp,
@@ -262,26 +263,6 @@ def pdf_template():
 
 	rendered=render_template('pdf.html',data=data,src=src)
 	pdf=pdfkit.from_string(rendered,False)
-#	return render_template('pdf.html')
-# 	data = { #Guarda los datos en variables de un diccionario para meterlos en la vista
-# 		"nombre":nombre,
-# 		"paterno":paterno,
-# 		"materno":materno,
-# 		"sexo":sexo,
-# 		"dia":dia,
-# 		"mes":mes,
-# 		"anio":anio,
-# 		"entidad":entidad,
-# 		"curp":curp,
-# 		"edad":edad,
-# 		"direccion":direccion
-# 	}
-# 	rendered = render_template('pdf_template.html',data=data,src=src) #Renderiza la vista 
-# 	css = ['static/vendor/bootstrap/css/bootstrap.css']
-# 	pdf = pdfkit.from_string(rendered,False,css = css) # Crea el pdf que se mostrara en el navegador
-
-# 	pdf1 = pdfkit.from_string(rendered,data["nombre"]+".pdf",css = css) #Crea el pdf almacenado 
-
 	
 	response=make_response(pdf) #Crea la respuesta para el navegador
 	response.headers['Content-Type'] = 'application/pdf' #Indica que la respuesta sera de tipo PDF
