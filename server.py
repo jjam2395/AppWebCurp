@@ -13,8 +13,23 @@ def index():
 @app.route('/datos', methods=["GET","POST"])
 def add_datos():
 	
-	datos=request.form #recibe los datos en formato json
 	##########################################
+	global curp
+	global nombres
+	global paterno
+	global materno
+	global anio
+	global mes
+	global dia
+	global entidad
+	global s
+	global direccion
+	global correo
+	global telefono
+	global nControl
+	global escuela
+	global semestre
+
 	curp=""
 	nombrepila=""
 	mesesnombres=["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"]
@@ -31,6 +46,12 @@ def add_datos():
 	dia=(request.form['dia']).upper()
 	entidad=(request.form['entidad']).upper()
 	s=(request.form['sexo']).upper()
+	direccion=(request.form['direccion']).upper()
+	correo=(request.form['correo']).upper()
+	telefono=(request.form['telefono']).upper()
+	nControl=(request.form['nControl']).upper()
+	escuela=(request.form['escuela']).upper()
+	semestre=(request.form['semestre']).upper()
 	#################################################3
 	curp +=paterno[0:1]
 	#ENCONTRAR PRIMERA VOCAL DEL PRIMER APELLIDO
