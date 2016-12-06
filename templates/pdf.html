@@ -10,7 +10,7 @@
 	    <h3 >
 	    <img src="" width="50" height="50" >
 	    	<strong >
-	    		PYDF Creator: Ficha de identificación personal
+	    		PYDF Creator
 	    	</strong>
 
 	    </h3>
@@ -19,7 +19,7 @@
     	<div >
 		  <div >
 		    <a href="#">
-		      <img src="">
+		      <img src={{src}}>
 		    </a>
 		  </div>
 		  <div >
@@ -27,15 +27,15 @@
 		       <h3>Datos Personales</h3>
 		      	<strong>
 			      	<br>
-			    	Nombre : 
+			    	Nombre : {{data.nombres}} {{data.paterno}} {{data.materno}} 
 			    	<br>
-			    	Sexo : 
+			    	Sexo : {{data.s}}
 			    	<br>
-					Edad : 
+					Edad : {{data.edad}}
 					<hr>
-					Curp: 
+					Curp: {{data.curp}}
 					<br>
-					Fecha de nacimiento: 
+					Fecha de nacimiento: {{data.anio}} / {{data.mes}} / {{data.dia}}
 					<br>
 					Lugar de nacimiento: 
 					<br>

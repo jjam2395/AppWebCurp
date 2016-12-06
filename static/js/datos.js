@@ -16,10 +16,9 @@ $(document).ready(function() {
 			entidad:$("#entidad").val(),
 			sexo:$("#sexo").val(),
 			
-			direccion:$("#direccion").val(),
 			correo:$("#correo").val(),
 			telefono:$("#telefono").val(),
-			nControl:$("#cControl").val(),
+			nControl:$("#nControl").val(),
 			escuela:$("#escuela").val(),
 			semestre:$("#semestre").val(),
 			carrera:$("#carrera").val()
