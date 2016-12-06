@@ -1,3 +1,8 @@
+body
+{	
+	font-family: 'Libre Franklin', sans-serif;
+	text-align: justify;
+}
 .formcurp
 {
 	background-color: #9Ca5a6;
@@ -38,6 +43,35 @@
   content: "->";
 }
 
+
+.jumbotron{
+	margin: 0;
+	text-align: justify;
+}
+
+
+#footer-container
+{
+	background-color:#303947;
+	color: white;
+	padding: 3em 0;
+}
+
+#footer-container h4{
+	font-size: 16px;
+}
+
+@media (max-width: 768px){
+	#footer-container [class*="col-"]
+	{
+		margin-bottom: 2em;
+	}
+}
+
+
+
+
+
 .btn-primary
 {
 	background-color: #303947;
@@ -49,4 +83,17 @@
 {
 	background-color: #323f59;
 	border-color: #405172;
+}
+
+.botton-toggle{
+	padding: 0;
+}
+
+a
+{
+	color: white;
+	text-decoration: none;
+}
+a:hover{
+	color:#A0BBCD;
 }
