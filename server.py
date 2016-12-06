@@ -263,6 +263,7 @@ def pdf_template():
 
 	rendered=render_template('pdf.html',data=data,src=src)
 	pdf=pdfkit.from_string(rendered,False)
+
 	
 	response=make_response(pdf) #Crea la respuesta para el navegador
 	response.headers['Content-Type'] = 'application/pdf' #Indica que la respuesta sera de tipo PDF
