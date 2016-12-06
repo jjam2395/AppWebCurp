@@ -1,0 +1,52 @@
+.formcurp
+{
+	background-color: #9Ca5a6;
+	padding: 2em;
+	color: white;
+}
+
+#header-container{
+	background-color: #303947;
+	color:white;
+	padding: .8em;
+}
+
+#navMenu{
+	background-color: #456F8D;
+}
+
+#header-container .navbar-toggler{
+	color: white;
+}
+
+
+#breadcrumbs-container .breadcrumb {
+  background-color: #456F8D;
+  margin: 1em 0;
+}
+
+#breadcrumbs-container .breadcrumb .breadcrumb-item {
+	color: #fff;
+  
+}
+
+#breadcrumbs-container .breadcrumb .breadcrumb-item.active {
+  color: #A0BBCD;
+}
+
+#breadcrumbs-container .breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+  content: "->";
+}
+
+.btn-primary
+{
+	background-color: #303947;
+	border-color: #405172;
+}
+
+
+.btn-primary:hover
+{
+	background-color: #323f59;
+	border-color: #405172;
+}

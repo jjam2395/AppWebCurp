@@ -1,64 +1,262 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<script src="/static/js/jquery.min.js"></script>
-		<script src="/static/js/datos.js?1.0.25"></script>
-		<title>Solicitud Beca</title>
-	</head>
-	<body>
-		<form>
-			<label>Nombre</label>
-			<input type="text" id="nombres"></input><br>
-			<label>A. paterno</label>
-			<input type="text" id="paterno"></input><br>
-			<label>A. materno</label>
-			<input type="text" id="materno"></input><br>
-			<label>Fecha de nacimiento</label>
-			<input type="date" id="fNacer"></input><br>
-			<label>Direccion</label>
-			<input type="text" id="direccion"></input><br>
-			<label>Entidad</label>
-			<datalist id="lentidad">
-		    <option value="AGUASCALIENTES" >
-		    <option value="BAJA CALIFORNIA" >
-		    <option value="BAJA CALIFORNIA SUR">
-		   	<option value="CAMPECHE" >
-		   	<option value="COAHUILA DE ZARAGOZA" >
-		   	<option value="CHIAPAS" >
-		   	<option value="CHIHUAHUA" >
-		   	<option value="DISTRITO FEDERAL" >
-		   	<option value="DURANGO" >
-		   	<option value="JALISCO" >
-		   	<option value="ESTADO DE MEXICO" >
-		   	<option value="MICHOACAN DE OCAMPO" >
-		   	<option value="MORELOS" >
-		   	<option value="NAYARIT" >
-		   	<option value="OAXACA" >
-		   	<option value="TABASCO" >
-		   	<option value="VERACRUZ" >
-		   	<option value="ZACATECAS" >
-		   	<option value="EXTRANEJERO" >
-			</datalist>
-			<input type="text" list="lentidad" id="entidad"></input><br>
-			<label>Sexo</label>
-			<datalist id="lsexo">
-		    <option value="H" label="Hombre">
-		    <option value="M" label="Mujer">
-			</datalist>
-			<input name="color" list="lsexo" id="sexo"></input><br>
-			<label>Correo electronico</label>
-			<input type="text" id="correo"></input><br>
-			<label>Telefono</label>
-			<input type="text" id="telefono"></input><br>
-			<label>No. de control</label>
-			<input type="text" id="nControl"></input><br>
-			<label>Escuela</label>
-			<input type="text" id="escuela"></input><br>
-			<label>Semestre</label>
-			<input type="text" id=semestre></input><br>
-			<label>Carrera</label>
-			<input type="text" id="carrera"></input><br>
-			<a id="Gencurp" href="/camara">Enviar solicitud</a>
-		</form>
-	</body>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Solicita tu beca</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+
+            <!-- Bootstrap CSS -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/datos.js?1.0.25"></script>
+    <link href="/static/css/bootstrap-flex.min.css" rel="stylesheet">
+    <link href="/static/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/css/app.css?1.1.7" rel="stylesheet">
+  <head>
+  <body>
+
+
+
+  <!-- header -->
+   <div class="container">
+  <header id="header-container">
+ 
+        <div class="row flex-items-xs-middle flex-items-xs-center flex-items-md-around ">
+          <div class="col-xs-9  col-sm-10 col-md-6 text-xs-left text-sm-center text-md-left columna">
+            <h1 class="hidden-xs-down">Becas SEP</h1>
+            <h3 class="hidden-sm-up">Becas SEP</h3>
+          </div>
+          <div class="col-xs-1 col-sm-2 col-md-6  text-xs-center  text-md-center columna">
+            <span class="hidden-sm-down text-uppercase font-weight-bold">
+                <a  class="nav-link" href="www.sep.gob.mx"><img  height=80em src="/static/images/sep.png"></a>
+              </span>
+          </div>
+          <div class="col-xs-1 hidden-sm-up text-md-left">
+             <button class="navbar-toggler   " data-toggle="collapse" data-target="#navMenu">&#9776;</button>
+          </div>
+        </div>
+  </div>
+</header>
+
+  
+   <!-- /header -->
+
+   <!-- Menu -->
+   <div class="container">
+   <div id="menu-container">
+     <nav id="navMenu" class="navbar-toggleable-xs navbar navbar-dark collapse"  ">
+      <div class="container">
+          <div class="row">
+            <div class="col-xs-12 ">
+              <ul class="nav navbar-nav text-xs-center">
+                <li class="nav-item ">
+                  <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item ">
+                  <a href="/solicita" class="nav-link">Solicita tu beca</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#faq" class="nav-link">Preguntas Frecuentes</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#quien" class="nav-link">Acerca de Becas</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+      </div>
+     </nav>
+    </div>
+    </div>
+
+   <!-- /Menu -->
+
+<!-- inicio -->
+<!--breadcrumb -->
+    <div id="breadcrumbs-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs">
+            <nav class="breadcrumb">
+            <a class="breadcrumb-item" href="index">Pagina Principal</a>
+              <span class="breadcrumb-item active" > Solicita tu Beca</span>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--breadcrumb -->
+  
+<!-- inicio -->
+
+<!-- formulario-container -->
+
+
+<div class="formulario-container">
+  <div class="container">
+    <div class="card formcurp" >
+<form>
+<div class="form-group row flex-items-xs-around ">
+    <label class="col-xs-12 col-md col-form-label text-md-right" for="nombre">Nombre:</label>
+    <div class="col-xs-12 col-md-2">
+      <input type="text" class="form-control" id="nombres" name="nombres"  placeholder="Escribe tu nombre" required>
+    </div>
+    <label class="col-xs-12 col-md col-form-label text-md-right" for="paterno">A. Paterno:</label>
+    <div class="col-xs-12 col-md-2">
+      <input type="text" class="form-control" id="paterno" name="paterno"  placeholder="Escribe tu A. Paterno" required>
+    </div>
+    <label class="col-xs-12 col-md col-form-label text-md-right" for="materno">A. Materno:</label>
+    <div class="col-xs-12 col-md-2 ">
+      <input type="text" class="form-control" id="materno" name="materno"  placeholder="Escribe tu A. Paterno" required>
+    </div>
+</div>
+
+<div class="form-group row text-xs-left flex-items-xs-left ">
+    <label class="col-xs-12 col-md-2 col-form-label text-md-right" for="nombre">Fecha de Nacimiento:</label>
+    <div class="col-xs-12 col-md-3">
+      <input  name="color" type="date" class="form-control" id="fNacer" name="fNacer" required>
+    </div>
+    <label class="col-xs-12 col-md-1 col-form-label text-md-right" for="paterno"> Sexo:</label>
+     <datalist id="lsexo">
+        <option value="H" label="Hombre">
+        <option value="M" label="Mujer">
+    </datalist>
+    <div class="col-xs-12 col-md-2">
+      <input  list="lsexo" name="color" class="form-control " id="sexo" name="sexo" required>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col-xs-12 col-md-2 col-form-label text-md-right" for="materno">Email:</label>
+    <div class="col-xs-12 col-md-9 ">
+      <input type="correo" class="form-control" id="correo" name="correo" placeholder="Tu@correo.com">
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col-xs-12 col-md-2 col-form-label text-md-right" for="telefono">Telefono:</label>
+    <div class="col-xs-12 col-md-9 text-md-center">
+      <input type="tel" class="form-control" id="telefono" name="telefono"  placeholder="Escribe tu telefono con lada" required>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col-xs-12 col-md-2 col-form-label text-md-right" for="calle">Calle:</label>
+    <div class="col-xs-12 col-md-9 text-md-center">
+      <input type="text" class="form-control" id="calle" name="calle" required  placeholder="Incluir número">
+    </div>
+</div>
+<div class="form-group row">    
+    <label class="col-xs-12 col-md-2 col-form-label text-md-right" for="colonia">Colonia:</label>
+    <div class="col-xs-12 col-md-9 text-md-center">
+      <input type="text" class="form-control" id="colonia" name="colonia"  required placeholde
+      r="Tu Colonia">
+    </div>
+</div>
+<div class="form-group row">    
+    <label class="col-xs-12 col-md-2 col-form-label text-md-right" for="cp">Codigo Postal</label>
+    <div class="col-xs-12 col-md-9 text-md-center">
+      <input type="text" class="form-control" id="cp" name="cp" required placeholder="7 digitos">
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col-xs-12 col-md-2 col-form-label text-md-right" for="edo">Estado</label>
+    <div class="col-xs-12 col-md-9 text-md-center">
+       <datalist id="lentidad">
+        <option value="AGUASCALIENTES" >
+        <option value="BAJA CALIFORNIA" >
+        <option value="BAJA CALIFORNIA SUR">
+        <option value="CAMPECHE" >
+        <option value="COAHUILA DE ZARAGOZA" >
+        <option value="CHIAPAS" >
+        <option value="CHIHUAHUA" >
+        <option value="DISTRITO FEDERAL" >
+        <option value="DURANGO" >
+        <option value="JALISCO" >
+        <option value="ESTADO DE MEXICO" >
+        <option value="MICHOACAN DE OCAMPO" >
+        <option value="MORELOS" >
+        <option value="NAYARIT" >
+        <option value="OAXACA" >
+        <option value="TABASCO" >
+        <option value="VERACRUZ" >
+        <option value="ZACATECAS" >
+        <option value="EXTRANJERO" >
+      </datalist>
+      <input type="text" class="form-control" list="lentidad" id="entidad" required></input>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col-xs-12 col-md-2 col-form-label  text-md-right" for="ciudad">Ciudad / Municipio</label>
+    <div class="col-xs-12 col-md-9 text-md-center">
+      <input type="text" class="form-control" id="ciudad" name="ciudad" required>
+    </div>
+</div>
+
+
+<datalist id="lescuela">
+        <option value="Instituto tecnnológico de Cuautla" >
+        <option value="Instituto tecnnológico de Zacatepec" >
+        <option value="Universidad Politecnica del Estado de Morelos">
+        <option value="Universidad Pedagógica Nacional " >
+</datalist>
+<div class="form-group row">
+  <label class="col-xs-12 col-md-2 col-form-label  text-md-right" for="escuela">Institución educativa</label>
+  <div class="col-xs-12 col-md-9 text-md-center">
+      <input type="escuela"  list="lescuela" class="form-control" id="escuela" name="escuela">
+  </div>
+</div>
+<div class="form-group row">
+    <label class="col-xs-12 col-md-2 col-form-label  text-md-right" for="ncontrol">N° de Control/ Matricula</label>
+    <div class="col-xs-12 col-md-9 text-md-center">
+      <input type="text" class="form-control" id="ncontrol" name="ncontrol" required>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col-xs-12 col-md-2 col-form-label  text-md-right" for="semestre">Semestre</label>
+    <div class="col-xs-12 col-md-9 text-md-center">
+      <input type="text" class="form-control" id="semestre" name="semestre" required>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col-xs-12 col-md-2 col-form-label  text-md-right" for="carrera">Carrera</label>
+    <div class="col-xs-12 col-md-9 text-md-center">
+      <input type="text" class="form-control" id="carrera" name="carrera" required>
+    </div>
+</div>
+
+  <div class="form-group row">
+    <div class="col-xs-12 text-xs-center">
+      <a id="Gencurp" href="/camara" class="btn btn-primary">Enviar Solicitud</a>
+    </div>
+  </div>
+</form>
+</div>
+  </div>  
+
+</div>
+
+<!-- / formulario-container -->
+
+<!-- /inicio -->
+
+  <!-- footer -->
+  <footer id="footer-container">
+    <div class="container">
+      <div class="row text-xs-center text-md-left">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-3 offset-md-5">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /footer -->
+ 
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+  </body>
 </html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/datos.js?1.0.25"></script>
+		<title>Solicitud Beca</title>
+	</head>
+	<body>
+		<form>
+			<label>Nombre</label>
+			<input type="text" id="nombres"></input><br>
+			<label>A. paterno</label>
+			<input type="text" id="paterno"></input><br>
+			<label>A. materno</label>
+			<input type="text" id="materno"></input><br>
+			<label>Fecha de nacimiento</label>
+			<input type="date" id="fNacer"></input><br>
+			<label>Direccion</label>
+			<input type="text" id="direccion"></input><br>
+			<label>Entidad</label>
+			<datalist id="lentidad">
+		    <option value="AGUASCALIENTES" >
+		    <option value="BAJA CALIFORNIA" >
+		    <option value="BAJA CALIFORNIA SUR">
+		   	<option value="CAMPECHE" >
+		   	<option value="COAHUILA DE ZARAGOZA" >
+		   	<option value="CHIAPAS" >
+		   	<option value="CHIHUAHUA" >
+		   	<option value="DISTRITO FEDERAL" >
+		   	<option value="DURANGO" >
+		   	<option value="JALISCO" >
+		   	<option value="ESTADO DE MEXICO" >
+		   	<option value="MICHOACAN DE OCAMPO" >
+		   	<option value="MORELOS" >
+		   	<option value="NAYARIT" >
+		   	<option value="OAXACA" >
+		   	<option value="TABASCO" >
+		   	<option value="VERACRUZ" >
+		   	<option value="ZACATECAS" >
+		   	<option value="EXTRANEJERO" >
+			</datalist>
+			<input type="text" list="lentidad" id="entidad"></input><br>
+			<label>Sexo</label>
+			<datalist id="lsexo">
+		    <option value="H" label="Hombre">
+		    <option value="M" label="Mujer">
+			</datalist>
+			<input name="color" list="lsexo" id="sexo"></input><br>
+			<label>Correo electronico</label>
+			<input type="text" id="correo"></input><br>
+			<label>Telefono</label>
+			<input type="text" id="telefono"></input><br>
+			<label>No. de control</label>
+			<input type="text" id="nControl"></input><br>
+			<label>Escuela</label>
+			<input type="text" id="escuela"></input><br>
+			<label>Semestre</label>
+			<input type="text" id=semestre></input><br>
+			<label>Carrera</label>
+			<input type="text" id="carrera"></input><br>
+			<a id="Gencurp" href="#">Enviar solicitud</a>
+		</form>
+	</body>
+</html>
