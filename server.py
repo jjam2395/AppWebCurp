@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, make_response
 import string
 import random
 import pdfkit
@@ -27,7 +27,6 @@ def add_datos():
 	global dia
 	global entidad
 	global s
-	global direccion
 	global correo
 	global telefono
 	global nControl
@@ -50,7 +49,6 @@ def add_datos():
 	dia=(request.form['dia']).upper()
 	entidad=(request.form['entidad']).upper()
 	s=(request.form['sexo']).upper()
-	direccion=(request.form['direccion']).upper()
 	correo=(request.form['correo']).upper()
 	telefono=(request.form['telefono']).upper()
 	nControl=(request.form['nControl']).upper()
@@ -239,9 +237,31 @@ def img():
 	return jsonify({'status': True}), 200 #retornamosun json para confirmar
 
 #Recibe los parametros que llevará el PDF
-@app.route('/pdf')
+@app.route('/pdf', methods=["GET","POST"])
 def pdf_template():
-	return render_template('pdf.html')
+	añoactual=2016
+	a=int(anio)
+	edad=añoactual
+	data={
+		"curp":curp,
+		"nombres":nombres,
+		"paterno":paterno,
+		"materno":materno,
+		"anio":anio,
+		"mes":mes,
+		"dia":dia,
+		"entidad":entidad,
+		"s":s,
+		"correo":correo,
+		"telefono":telefono,
+		"nControl":nControl,
+		"escuela":escuela,
+		"semestre":semestre
+	}
+
+	rendered=render_template('pdf.html',data=data,src=src)
+	pdf=pdfkit.from_string(rendered,False)
+#	return render_template('pdf.html')
 # 	data = { #Guarda los datos en variables de un diccionario para meterlos en la vista
 # 		"nombre":nombre,
 # 		"paterno":paterno,
@@ -262,10 +282,11 @@ def pdf_template():
 # 	pdf1 = pdfkit.from_string(rendered,data["nombre"]+".pdf",css = css) #Crea el pdf almacenado 
 
 	
-# 	response = make_response(pdf) #Crea la respuesta para el navegador
-# 	response.headers['Content-Type'] = 'application/pdf' #Indica que la respuesta sera de tipo PDF
-# 	response.headers['Content-Disposition'] = "inline; filename="+data["nombre"]+".pdf" #Agrega el nombre que tendra el archivo al ser descargado
-# 	return response, 200 #Envia la respuesta con un codigo 200 que significa que todo ocurrio correctamente
+	response=make_response(pdf) #Crea la respuesta para el navegador
+	response.headers['Content-Type'] = 'application/pdf' #Indica que la respuesta sera de tipo PDF
+	response.headers['Content-Disposition'] = "inline; filename="+data["nombres"]+".pdf" #Agrega el nombre que tendra el archivo al ser descargado
+	return response,200 #Envia la respuesta con un codigo 200 que significa que todo ocurrio correctamente
 
 
-app.run(debug=True, port=8000)
+if __name__ == '__main__': # Ejecuta el codigo 
+	app.run(debug=True,host='localhost',port=8000) #inicia la aplicacion web

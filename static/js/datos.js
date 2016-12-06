@@ -19,7 +19,7 @@ $(document).ready(function() {
 			direccion:$("#direccion").val(),
 			correo:$("#correo").val(),
 			telefono:$("#telefono").val(),
-			nControl:$("#cControl").val(),
+			nControl:$("#nControl").val(),
 			escuela:$("#escuela").val(),
 			semestre:$("#semestre").val(),
 			carrera:$("#carrera").val()
